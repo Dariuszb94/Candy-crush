@@ -19,6 +19,7 @@ const App = () => {
   useEffect(() => {
     createBoard();
   }, []);
+
   return <div></div>;
 };
 
