@@ -10,8 +10,9 @@ const App = () => {
     const randomColorArrangement = [];
 
     for (let i = 0; i < width * width; i++) {
-      const randomColor =
-        candyColors[Math.floor(Math.random() * candyColors.length)];
+      const randomNumber = Math.random();
+      const randomColorIndex = Math.floor(randomNumber * candyColors.length);
+      const randomColor = candyColors[randomColorIndex];
       randomColorArrangement.push(randomColor);
     }
     setCurrentColorArrangement(randomColorArrangement);
