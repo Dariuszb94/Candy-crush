@@ -20,7 +20,11 @@ const App = () => {
     createBoard();
   }, []);
 
-  return <div className='app'></div>;
+  return (
+    <div className='app'>
+      <div className='game'></div>
+    </div>
+  );
 };
 
 export default App;
