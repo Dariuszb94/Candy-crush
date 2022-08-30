@@ -13,8 +13,7 @@ const App = () => {
 
       if (
         columnOfThree.every(
-          (square) =>
-            currentColorArrangement[square] === decidedColor && !isBlank
+          (square) => currentColorArrangement[square] === decidedColor
         )
       ) {
         columnOfThree.forEach(
