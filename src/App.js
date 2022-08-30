@@ -6,7 +6,12 @@ const candyColors = ['blue', 'green', 'orange', 'purple', 'red', 'yellow'];
 const App = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
 
-  const checkForColumnOfThree = () => {};
+  const checkForColumnOfThree = () => {
+    for (let i = 0; i <= 47; i++) {
+      const columnOfThree = [i, i + width, i + width * 2];
+      console.log(columnOfThree);
+    }
+  };
 
   const createBoard = () => {
     const randomColorArrangement = [];
@@ -22,6 +27,7 @@ const App = () => {
 
   useEffect(() => {
     createBoard();
+    checkForColumnOfThree();
   }, []);
 
   return (
