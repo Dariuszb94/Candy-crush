@@ -6,6 +6,8 @@ const candyColors = ['blue', 'green', 'orange', 'purple', 'red', 'yellow'];
 const App = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
 
+  const checkForColumnOfThree = () => {};
+
   const createBoard = () => {
     const randomColorArrangement = [];
 
