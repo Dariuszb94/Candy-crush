@@ -11,10 +11,16 @@ const App = () => {
       const columnOfThree = [i, i + width, i + width * 2];
       const decidedColor = currentColorArrangement[i];
 
-      if (columnOfThree.every(square => currentColorArrangement[square] === decidedColor && !isBlank)) {
-          columnOfThree.forEach(square => currentColorArrangement[square] = '')
+      if (
+        columnOfThree.every(
+          (square) =>
+            currentColorArrangement[square] === decidedColor && !isBlank
+        )
+      ) {
+        columnOfThree.forEach(
+          (square) => (currentColorArrangement[square] = '')
+        );
       }
-  }
     }
   };
 
@@ -32,8 +38,14 @@ const App = () => {
 
   useEffect(() => {
     createBoard();
-    checkForColumnOfThree();
   }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      checkForColumnOfThree();
+    }, 100);
+    return () => clearInterval(timer);
+  }, [checkForColumnOfThree]);
 
   return (
     <div className='app'>
