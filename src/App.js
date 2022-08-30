@@ -19,7 +19,27 @@ const App = () => {
         columnOfFour.forEach(
           (square) => (currentColorArrangement[square] = '')
         );
-        return true;
+      }
+    }
+  };
+
+  const checkForRowOfFour = () => {
+    for (let i = 0; i < 64; i++) {
+      const rowOfFour = [i, i + 1, i + 2, i + 3];
+      const decidedColor = currentColorArrangement[i];
+      const notValid = [
+        5, 6, 7, 13, 14, 15, 21, 22, 23, 29, 30, 31, 37, 38, 39, 45, 46, 47, 53,
+        54, 55, 62, 63, 64,
+      ];
+
+      if (notValid.includes(i)) continue;
+
+      if (
+        rowOfFour.every(
+          (square) => currentColorArrangement[square] === decidedColor
+        )
+      ) {
+        rowOfFour.forEach((square) => (currentColorArrangement[square] = ''));
       }
     }
   };
@@ -57,7 +77,6 @@ const App = () => {
         )
       ) {
         rowOfThree.forEach((square) => (currentColorArrangement[square] = ''));
-        return true;
       }
     }
   };
