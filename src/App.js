@@ -9,7 +9,12 @@ const App = () => {
   const checkForColumnOfThree = () => {
     for (let i = 0; i <= 47; i++) {
       const columnOfThree = [i, i + width, i + width * 2];
-      console.log(columnOfThree);
+      const decidedColor = currentColorArrangement[i];
+
+      if (columnOfThree.every(square => currentColorArrangement[square] === decidedColor && !isBlank)) {
+          columnOfThree.forEach(square => currentColorArrangement[square] = '')
+      }
+  }
     }
   };
 
