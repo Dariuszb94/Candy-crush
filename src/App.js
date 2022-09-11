@@ -87,7 +87,7 @@ const App = () => {
       const isFirstRow = firstRow.includes(i);
 
       if (isFirstRow && currentColorArrangement[i] === '') {
-        let randomNumber = Math.floor(Math.random() * candyColors.length);
+        const randomNumber = Math.floor(Math.random() * candyColors.length);
         currentColorArrangement[i] = candyColors[randomNumber];
       }
 
