@@ -121,7 +121,7 @@ const App = () => {
     checkForRowOfFour,
     checkForColumnOfThree,
     checkForRowOfThree,
-    moveIntoSquareBelow
+    moveIntoSquareBelow,
     currentColorArrangement,
   ]);
 
