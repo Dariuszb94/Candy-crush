@@ -112,6 +112,7 @@ const App = () => {
       checkForRowOfFour();
       checkForColumnOfThree();
       checkForRowOfThree();
+      moveIntoSquareBelow();
       setCurrentColorArrangement([...currentColorArrangement]);
     }, 100);
     return () => clearInterval(timer);
@@ -120,6 +121,7 @@ const App = () => {
     checkForRowOfFour,
     checkForColumnOfThree,
     checkForRowOfThree,
+    moveIntoSquareBelow
     currentColorArrangement,
   ]);
 
