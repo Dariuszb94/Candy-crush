@@ -142,6 +142,7 @@ const App = () => {
             alt={candyColor}
             data-id={index}
             draggable={true}
+            onDragOver={(e) => e.preventDefault()}
             style={{ backgroundColor: candyColor }}
           />
         ))}
