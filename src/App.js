@@ -141,6 +141,7 @@ const App = () => {
             key={index}
             alt={candyColor}
             data-id={index}
+            draggable={true}
             style={{ backgroundColor: candyColor }}
           />
         ))}
