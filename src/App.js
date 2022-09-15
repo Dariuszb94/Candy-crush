@@ -144,6 +144,7 @@ const App = () => {
             draggable={true}
             onDragOver={(e) => e.preventDefault()}
             onDragEnter={(e) => e.preventDefault()}
+            onDragLeave={(e) => e.preventDefault()}
             style={{ backgroundColor: candyColor }}
           />
         ))}
