@@ -143,6 +143,7 @@ const App = () => {
             data-id={index}
             draggable={true}
             onDragOver={(e) => e.preventDefault()}
+            onDragEnter={(e) => e.preventDefault()}
             style={{ backgroundColor: candyColor }}
           />
         ))}
