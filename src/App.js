@@ -140,6 +140,7 @@ const App = () => {
           <img
             key={index}
             alt={candyColor}
+            data-id={index}
             style={{ backgroundColor: candyColor }}
           />
         ))}
