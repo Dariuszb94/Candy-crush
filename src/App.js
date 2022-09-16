@@ -120,6 +120,15 @@ const App = () => {
       squareBeingDragged.getAttribute('src');
     currentColorArrangement[squareBeingDraggedId] =
       squareBeingReplaced.getAttribute('src');
+
+    const validMoves = [
+      squareBeingDraggedId - 1,
+      squareBeingDraggedId - width,
+      squareBeingDraggedId + 1,
+      squareBeingDraggedId + width,
+    ];
+
+    const validMove = validMoves.includes(squareBeingReplacedId);
   };
 
   const createBoard = () => {
