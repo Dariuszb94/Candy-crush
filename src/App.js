@@ -108,6 +108,15 @@ const App = () => {
     setSquareBeingReplaced(e.target);
   };
 
+  const dragEnd = () => {
+    const squareBeingDraggedId = parseInt(
+      squareBeingDragged.getAttribute('data-id')
+    );
+    const squareBeingReplacedId = parseInt(
+      squareBeingReplaced.getAttribute('data-id')
+    );
+  };
+
   const createBoard = () => {
     const randomColorArrangement = [];
 
@@ -157,6 +166,7 @@ const App = () => {
             onDragEnter={(e) => e.preventDefault()}
             onDragLeave={(e) => e.preventDefault()}
             onDrop={dragDrop}
+            onDragEnd={dragEnd}
             style={{ backgroundColor: candyColor }}
           />
         ))}
