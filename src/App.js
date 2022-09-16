@@ -5,6 +5,7 @@ const candyColors = ['blue', 'green', 'orange', 'purple', 'red', 'yellow'];
 
 const App = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
+  const [squareBeingDragged, setSquareBeingDragged] = useState(null);
 
   const checkForColumnOfFour = () => {
     for (let i = 0; i <= 39; i++) {
@@ -98,6 +99,10 @@ const App = () => {
     }
   };
 
+  const dragStart = (e) => {
+    setSquareBeingDragged(e.target);
+  };
+
   const createBoard = () => {
     const randomColorArrangement = [];
 
@@ -142,6 +147,7 @@ const App = () => {
             alt={candyColor}
             data-id={index}
             draggable={true}
+            onDragStart={dragStart}
             onDragOver={(e) => e.preventDefault()}
             onDragEnter={(e) => e.preventDefault()}
             onDragLeave={(e) => e.preventDefault()}
