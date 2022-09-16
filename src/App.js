@@ -146,6 +146,12 @@ const App = () => {
     ) {
       setSquareBeingDragged(null);
       setSquareBeingReplaced(null);
+    } else {
+      currentColorArrangement[squareBeingReplacedId] =
+        squareBeingReplaced.getAttribute('src');
+      currentColorArrangement[squareBeingDraggedId] =
+        squareBeingDragged.getAttribute('src');
+      setCurrentColorArrangement([...currentColorArrangement]);
     }
   };
 
