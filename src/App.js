@@ -32,7 +32,7 @@ const App = () => {
         )
       ) {
         columnOfFour.forEach(
-          (square) => (currentColorArrangement[square] = '')
+          (square) => (currentColorArrangement[square] = blank)
         );
         return true;
       }
@@ -55,7 +55,9 @@ const App = () => {
           (square) => currentColorArrangement[square] === decidedColor
         )
       ) {
-        rowOfFour.forEach((square) => (currentColorArrangement[square] = ''));
+        rowOfFour.forEach(
+          (square) => (currentColorArrangement[square] = blank)
+        );
         return true;
       }
     }
@@ -72,7 +74,7 @@ const App = () => {
         )
       ) {
         columnOfThree.forEach(
-          (square) => (currentColorArrangement[square] = '')
+          (square) => (currentColorArrangement[square] = blank)
         );
         return true;
       }
@@ -94,7 +96,9 @@ const App = () => {
           (square) => currentColorArrangement[square] === decidedColor
         )
       ) {
-        rowOfThree.forEach((square) => (currentColorArrangement[square] = ''));
+        rowOfThree.forEach(
+          (square) => (currentColorArrangement[square] = blank)
+        );
         return true;
       }
     }
@@ -105,14 +109,14 @@ const App = () => {
       const firstRow = [0, 1, 2, 3, 4, 5, 6, 7];
       const isFirstRow = firstRow.includes(i);
 
-      if (isFirstRow && currentColorArrangement[i] === '') {
+      if (isFirstRow && currentColorArrangement[i] === blank) {
         const randomNumber = Math.floor(Math.random() * candyColors.length);
         currentColorArrangement[i] = candyColors[randomNumber];
       }
 
-      if (currentColorArrangement[i + width] === '') {
+      if (currentColorArrangement[i + width] === blank) {
         currentColorArrangement[i + width] = currentColorArrangement[i];
-        currentColorArrangement[i] = '';
+        currentColorArrangement[i] = blank;
       }
     }
   };
