@@ -204,6 +204,7 @@ const App = () => {
           <img
             key={index}
             alt={candyColor}
+            src={candyColor}
             data-id={index}
             draggable={true}
             onDragStart={dragStart}
