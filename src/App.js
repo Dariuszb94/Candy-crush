@@ -58,9 +58,9 @@ const App = () => {
 
       if (
         rowOfFour.every(
-          (square) => currentColorArrangement[square] === decidedColor
-        ) &&
-        !isBlank
+          (square) =>
+            currentColorArrangement[square] === decidedColor && !isBlank
+        )
       ) {
         setScoreDisplay((score) => score + 4);
         rowOfFour.forEach(
@@ -79,7 +79,8 @@ const App = () => {
 
       if (
         columnOfThree.every(
-          (square) => currentColorArrangement[square] === decidedColor
+          (square) =>
+            currentColorArrangement[square] === decidedColor && !isBlank
         )
       ) {
         setScoreDisplay((score) => score + 3);
@@ -104,7 +105,8 @@ const App = () => {
 
       if (
         rowOfThree.every(
-          (square) => currentColorArrangement[square] === decidedColor
+          (square) =>
+            currentColorArrangement[square] === decidedColor && !isBlank
         )
       ) {
         setScoreDisplay((score) => score + 3);
