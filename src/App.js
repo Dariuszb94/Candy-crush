@@ -32,6 +32,7 @@ const App = () => {
           (square) => currentColorArrangement[square] === decidedColor
         )
       ) {
+        setScoreDisplay((score) => score + 4);
         columnOfFour.forEach(
           (square) => (currentColorArrangement[square] = blank)
         );
@@ -56,6 +57,7 @@ const App = () => {
           (square) => currentColorArrangement[square] === decidedColor
         )
       ) {
+        setScoreDisplay((score) => score + 4);
         rowOfFour.forEach(
           (square) => (currentColorArrangement[square] = blank)
         );
@@ -74,6 +76,7 @@ const App = () => {
           (square) => currentColorArrangement[square] === decidedColor
         )
       ) {
+        setScoreDisplay((score) => score + 3);
         columnOfThree.forEach(
           (square) => (currentColorArrangement[square] = blank)
         );
@@ -97,6 +100,7 @@ const App = () => {
           (square) => currentColorArrangement[square] === decidedColor
         )
       ) {
+        setScoreDisplay((score) => score + 3);
         rowOfThree.forEach(
           (square) => (currentColorArrangement[square] = blank)
         );
