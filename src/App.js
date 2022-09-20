@@ -8,8 +8,14 @@ import yellowCandy from './images/yellow-candy.png';
 import blank from './images/blank.png';
 
 const width = 8;
-const candyColors = ['blue', 'green', 'orange', 'purple', 'red', 'yellow'];
-
+const candyColors = [
+  blueCandy,
+  orangeCandy,
+  purpleCandy,
+  redCandy,
+  yellowCandy,
+  greenCandy,
+];
 const App = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
   const [squareBeingDragged, setSquareBeingDragged] = useState(null);
