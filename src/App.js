@@ -144,11 +144,12 @@ const App = () => {
   };
 
   const dragEnd = () => {
+    const attr = 'data-id';
     const squareBeingDraggedId = parseInt(
-      squareBeingDragged.getAttribute('data-id')
+      squareBeingDragged.getAttribute(attr)
     );
     const squareBeingReplacedId = parseInt(
-      squareBeingReplaced.getAttribute('data-id')
+      squareBeingReplaced.getAttribute(attr)
     );
 
     currentColorArrangement[squareBeingReplacedId] =
